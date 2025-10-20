@@ -12,7 +12,7 @@ public:
     std::string state_name() const;   // declaration only
     void update(const drivers::CANParser& can, uint64_t now_ms);
     const SystemOutputs& outputs() const { return out_; }
-
+    void setSetpoint(double sp) { setpoint_ = sp; } 
 private:
     StateMachine sm_;
     PID pid_;

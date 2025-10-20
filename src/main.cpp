@@ -19,8 +19,14 @@ using namespace std::chrono;
 static bool keep_running = true;
 void sigint_handler(int) { keep_running = false; }
 
-int main() {
+int main(int argc, char* argv[]) {
     signal(SIGINT, sigint_handler);
+    double setpoint = 70.0;
+    if (argc > 1) {
+        try { setpoint = std::stod(argv[1]); }
+        catch (...) { std::cerr << "Invalid setpoint, using default 70°C\n"; }
+    }
+    std::cout << "[INFO] Using temperature setpoint: " << setpoint << "°C\n";
 
     // setup CAN socket
     int sock = socket(PF_CAN, SOCK_RAW | SOCK_NONBLOCK, CAN_RAW);
@@ -39,12 +45,12 @@ int main() {
 
     CANParser parser;
     CoolingController controller;
-
+    controller.setSetpoint(setpoint);
     struct can_frame frame;
-    const double dt_sec = 0.1; // 100 ms control loop
+    const double dt_sec = 0.05; // 50 ms = 20 Hz control loop
     auto next = steady_clock::now();
 
-        SystemState last_state = SystemState::OFF;
+    SystemState last_state = SystemState::OFF;
     while (keep_running) {
         int n = read(sock, &frame, sizeof(frame));
         if (n > 0) {
