@@ -44,39 +44,40 @@ Ubuntu 20.04 + (or similar)
 Packages:
 ```bash
 sudo apt install build-essential cmake can-utils
-
+```
 Build Steps
-
+```bash
 git clone https://github.com/navidfanaee/EAE_Firmware.git
 cd EAE_Firmware
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build -j
-
+```
 Executables will appear in the build/ directory.
 
 Run Unit Tests
-
+```bash
 cd build
 ctest --output-on-failure --verbose
-
+```
 You should see:
 
 100% tests passed, 0 tests failed
 
 Run the Firmware Simulation
 1- Create a virtual CAN interface
-
+```bash
 ./scripts/start_vcan.sh
+```
 
 2- Start the firmware (with optional temperature setpoint)
-
+```bash
 ./build/eae_firmware 75
-
+```
 If no argument is given, the default setpoint is 70 °C.
 3- In another terminal, send simulated CAN data with an argument determining can data rate 
-
+```bash
 ./scripts/send_can.sh 5
-
+```
 4- Observe the live output
 
 [INFO] Connected to vcan0
