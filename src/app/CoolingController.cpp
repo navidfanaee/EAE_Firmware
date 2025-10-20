@@ -3,6 +3,10 @@
 using namespace eae::app;
 using namespace eae::drivers;
 
+std::string CoolingController::state_name() const {
+    return sm_.state_name();
+}
+
 CoolingController::CoolingController()
 : pid_(1.5, 0.2, 0.05, 0.0, 100.0),
   setpoint_(70.0) {}

@@ -46,7 +46,7 @@ public:
     SystemState state() const { return state_; }
     std::string state_name() const;
 
-    // Optional: register a callback which is invoked whenever state changes
+    // register a callback which is invoked whenever state changes
     void set_transition_callback(TransitionCallback cb) { on_transition_ = std::move(cb); }
 
 private:

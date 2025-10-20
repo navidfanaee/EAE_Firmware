@@ -223,9 +223,9 @@ CMakeFiles/eae_firmware.dir/clean:
 
 # All Build rule for target.
 CMakeFiles/test_statemachine.dir/all: CMakeFiles/drivers.dir/all
+CMakeFiles/test_statemachine.dir/all: CMakeFiles/appcore.dir/all
 CMakeFiles/test_statemachine.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/test_statemachine.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
-CMakeFiles/test_statemachine.dir/all: CMakeFiles/appcore.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_statemachine.dir/build.make CMakeFiles/test_statemachine.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_statemachine.dir/build.make CMakeFiles/test_statemachine.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vboxuser/EAE_Firmware/build/CMakeFiles --progress-num=23,24 "Built target test_statemachine"
@@ -252,9 +252,9 @@ CMakeFiles/test_statemachine.dir/clean:
 
 # All Build rule for target.
 CMakeFiles/test_controller.dir/all: CMakeFiles/drivers.dir/all
+CMakeFiles/test_controller.dir/all: CMakeFiles/appcore.dir/all
 CMakeFiles/test_controller.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/test_controller.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
-CMakeFiles/test_controller.dir/all: CMakeFiles/appcore.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_controller.dir/build.make CMakeFiles/test_controller.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_controller.dir/build.make CMakeFiles/test_controller.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vboxuser/EAE_Firmware/build/CMakeFiles --progress-num=19,20 "Built target test_controller"
@@ -281,9 +281,9 @@ CMakeFiles/test_controller.dir/clean:
 
 # All Build rule for target.
 CMakeFiles/test_pid.dir/all: CMakeFiles/drivers.dir/all
+CMakeFiles/test_pid.dir/all: CMakeFiles/appcore.dir/all
 CMakeFiles/test_pid.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/test_pid.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
-CMakeFiles/test_pid.dir/all: CMakeFiles/appcore.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pid.dir/build.make CMakeFiles/test_pid.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pid.dir/build.make CMakeFiles/test_pid.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vboxuser/EAE_Firmware/build/CMakeFiles --progress-num=21,22 "Built target test_pid"
