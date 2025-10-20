@@ -1,34 +1,32 @@
-#include <gtest/gtest.h>
 #include "app/CoolingController.hpp"
 #include "drivers/CANParser.hpp"
+#include <gtest/gtest.h>
 
 using namespace eae::app;
 using namespace eae::drivers;
 
-class FakeCAN : public CANParser {
-public:
-    void set(double temp, bool ign, bool lvl, bool pump, bool reset=false) {
-        temp_ = temp; ign_ = ign; lvl_ = lvl; pump_ = pump; reset_ = reset;
-    }
-    double temperature() const { return temp_; }
-    bool ignition() const { return ign_; }
-    bool level_ok() const { return lvl_; }
-    bool pump_feedback_ok() const { return pump_; }
-    bool manual_reset() const { return reset_; }
-private:
-    double temp_{};
-    bool ign_{}, lvl_{}, pump_{}, reset_{};
-};
-
-TEST(CoolingController, NormalOperation) {
-    FakeCAN can;
+TEST(CoolingController, NormalOperation)
+{
     CoolingController ctrl;
+    CANParser parser;
 
-    can.set(60.0, true, true, true);
-    ctrl.update(can, 0);
-    EXPECT_TRUE(ctrl.outputs().pump_cmd);
+    // Fabricate CAN values consistent with nominal running conditions
+    CANFrame temp{0x100, {0x1A, 0x90}}; // 0x1A90=6800 => 68.00°C
+    CANFrame lvl {0x101, {1}};
+    CANFrame pump{0x102, {1}};
+    CANFrame ign {0x103, {1}};
+    CANFrame reset{0x104, {0}};
 
-    can.set(90.0, true, true, true);
-    ctrl.update(can, 100);
-    EXPECT_GE(ctrl.outputs().fan_pwm, 0);
+    parser.parseFrame(temp);
+    parser.parseFrame(lvl);
+    parser.parseFrame(pump);
+    parser.parseFrame(ign);
+    parser.parseFrame(reset);
+
+    ctrl.update(parser, /*now_ms=*/100);
+
+    auto out = ctrl.outputs();
+    // Expect system to leave OFF and command the pump ON
+    EXPECT_TRUE(out.pump_cmd);
+    EXPECT_GE(out.fan_pwm, 0);
 }

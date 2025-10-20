@@ -1,10 +1,10 @@
-Start testing: Oct 20 10:29 PDT
+Start testing: Oct 20 11:12 PDT
 ----------------------------------------------------------
-1/2 Testing: statemachine_test
-1/2 Test: statemachine_test
+1/4 Testing: statemachine_test
+1/4 Test: statemachine_test
 Command: "/home/vboxuser/EAE_Firmware/build/test_statemachine"
 Directory: /home/vboxuser/EAE_Firmware/build
-"statemachine_test" start time: Oct 20 10:29 PDT
+"statemachine_test" start time: Oct 20 11:12 PDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/vboxuser/EAE_Firmware/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -27,27 +27,99 @@ Running main() from /home/vboxuser/EAE_Firmware/build/_deps/googletest-src/googl
 [==========] 5 tests from 1 test suite ran. (0 ms total)
 [  PASSED  ] 5 tests.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"statemachine_test" end time: Oct 20 10:29 PDT
+"statemachine_test" end time: Oct 20 11:12 PDT
 "statemachine_test" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-Unable to find executable: /home/vboxuser/EAE_Firmware/build/test_coolingcontroller
-2/2 Testing: coolingcontroller_test
-2/2 Test: coolingcontroller_test
-Command: ""
+2/4 Testing: coolingcontroller_test
+2/4 Test: coolingcontroller_test
+Command: "/home/vboxuser/EAE_Firmware/build/test_controller"
 Directory: /home/vboxuser/EAE_Firmware/build
-"coolingcontroller_test" start time: 
+"coolingcontroller_test" start time: Oct 20 11:12 PDT
 Output:
 ----------------------------------------------------------
+Running main() from /home/vboxuser/EAE_Firmware/build/_deps/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CoolingController
+[ RUN      ] CoolingController.NormalOperation
+[       OK ] CoolingController.NormalOperation (0 ms)
+[----------] 1 test from CoolingController (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"coolingcontroller_test" end time: Oct 20 10:29 PDT
+"coolingcontroller_test" end time: Oct 20 11:12 PDT
 "coolingcontroller_test" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 20 10:29 PDT
+3/4 Testing: pid_test
+3/4 Test: pid_test
+Command: "/home/vboxuser/EAE_Firmware/build/test_pid"
+Directory: /home/vboxuser/EAE_Firmware/build
+"pid_test" start time: Oct 20 11:12 PDT
+Output:
+----------------------------------------------------------
+Running main() from /home/vboxuser/EAE_Firmware/build/_deps/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from PID
+[ RUN      ] PID.ProportionalOnly
+[       OK ] PID.ProportionalOnly (0 ms)
+[ RUN      ] PID.IntegratorAccumulation
+[       OK ] PID.IntegratorAccumulation (0 ms)
+[ RUN      ] PID.DerivativeReducesOnRisingMeasurement
+[       OK ] PID.DerivativeReducesOnRisingMeasurement (0 ms)
+[ RUN      ] PID.SaturationAndAntiWindup
+[       OK ] PID.SaturationAndAntiWindup (0 ms)
+[----------] 4 tests from PID (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 4 tests.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"pid_test" end time: Oct 20 11:12 PDT
+"pid_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/4 Testing: canparser_test
+4/4 Test: canparser_test
+Command: "/home/vboxuser/EAE_Firmware/build/test_canparser"
+Directory: /home/vboxuser/EAE_Firmware/build
+"canparser_test" start time: Oct 20 11:12 PDT
+Output:
+----------------------------------------------------------
+Running main() from /home/vboxuser/EAE_Firmware/build/_deps/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from CANParser
+[ RUN      ] CANParser.ParsesTemperature
+[       OK ] CANParser.ParsesTemperature (0 ms)
+[ RUN      ] CANParser.ParsesLevel
+[       OK ] CANParser.ParsesLevel (0 ms)
+[ RUN      ] CANParser.ParsesPumpFeedback
+[       OK ] CANParser.ParsesPumpFeedback (0 ms)
+[----------] 3 tests from CANParser (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 3 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"canparser_test" end time: Oct 20 11:12 PDT
+"canparser_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 20 11:12 PDT

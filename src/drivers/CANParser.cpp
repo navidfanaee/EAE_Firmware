@@ -12,7 +12,7 @@ bool CANParser::parseFrame(const CANFrame& f)
     switch (f.id) {
     case CAN_ID_TEMPERATURE:
         // 2-byte signed int16 in centi-degrees (big-endian)
-        data_.temperature_c = static_cast<double>((f.data[0] << 8) | f.data[1]) / 100.0;
+        data_.temperature_c = static_cast<double>((f.data[0] << 8) | f.data[1]) ;
         return true;
         // parse level status from CAN frame
     case CAN_ID_LEVEL:

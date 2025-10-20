@@ -3,6 +3,8 @@
 /home/vboxuser/EAE_Firmware/build/CMakeFiles/eae_firmware.dir
 /home/vboxuser/EAE_Firmware/build/CMakeFiles/test_statemachine.dir
 /home/vboxuser/EAE_Firmware/build/CMakeFiles/test_controller.dir
+/home/vboxuser/EAE_Firmware/build/CMakeFiles/test_pid.dir
+/home/vboxuser/EAE_Firmware/build/CMakeFiles/test_canparser.dir
 /home/vboxuser/EAE_Firmware/build/CMakeFiles/test.dir
 /home/vboxuser/EAE_Firmware/build/CMakeFiles/edit_cache.dir
 /home/vboxuser/EAE_Firmware/build/CMakeFiles/rebuild_cache.dir

@@ -83,6 +83,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/eae_firmware.dir/DependInfo.cmake"
   "CMakeFiles/test_statemachine.dir/DependInfo.cmake"
   "CMakeFiles/test_controller.dir/DependInfo.cmake"
+  "CMakeFiles/test_pid.dir/DependInfo.cmake"
+  "CMakeFiles/test_canparser.dir/DependInfo.cmake"
   "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
   "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"

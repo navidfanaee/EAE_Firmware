@@ -237,6 +237,32 @@ test_controller/fast:
 .PHONY : test_controller/fast
 
 #=============================================================================
+# Target rules for targets named test_pid
+
+# Build rule for target.
+test_pid: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_pid
+.PHONY : test_pid
+
+# fast build rule for target.
+test_pid/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pid.dir/build.make CMakeFiles/test_pid.dir/build
+.PHONY : test_pid/fast
+
+#=============================================================================
+# Target rules for targets named test_canparser
+
+# Build rule for target.
+test_canparser: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_canparser
+.PHONY : test_canparser
+
+# fast build rule for target.
+test_canparser/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_canparser.dir/build.make CMakeFiles/test_canparser.dir/build
+.PHONY : test_canparser/fast
+
+#=============================================================================
 # Target rules for targets named gmock
 
 # Build rule for target.
@@ -408,6 +434,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/eae_firmware.dir/build.make CMakeFiles/eae_firmware.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+tests/test_canparser.o: tests/test_canparser.cpp.o
+.PHONY : tests/test_canparser.o
+
+# target to build an object file
+tests/test_canparser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_canparser.dir/build.make CMakeFiles/test_canparser.dir/tests/test_canparser.cpp.o
+.PHONY : tests/test_canparser.cpp.o
+
+tests/test_canparser.i: tests/test_canparser.cpp.i
+.PHONY : tests/test_canparser.i
+
+# target to preprocess a source file
+tests/test_canparser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_canparser.dir/build.make CMakeFiles/test_canparser.dir/tests/test_canparser.cpp.i
+.PHONY : tests/test_canparser.cpp.i
+
+tests/test_canparser.s: tests/test_canparser.cpp.s
+.PHONY : tests/test_canparser.s
+
+# target to generate assembly for a file
+tests/test_canparser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_canparser.dir/build.make CMakeFiles/test_canparser.dir/tests/test_canparser.cpp.s
+.PHONY : tests/test_canparser.cpp.s
+
 tests/test_controller.o: tests/test_controller.cpp.o
 .PHONY : tests/test_controller.o
 
@@ -431,6 +481,30 @@ tests/test_controller.s: tests/test_controller.cpp.s
 tests/test_controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_controller.dir/build.make CMakeFiles/test_controller.dir/tests/test_controller.cpp.s
 .PHONY : tests/test_controller.cpp.s
+
+tests/test_pid.o: tests/test_pid.cpp.o
+.PHONY : tests/test_pid.o
+
+# target to build an object file
+tests/test_pid.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pid.dir/build.make CMakeFiles/test_pid.dir/tests/test_pid.cpp.o
+.PHONY : tests/test_pid.cpp.o
+
+tests/test_pid.i: tests/test_pid.cpp.i
+.PHONY : tests/test_pid.i
+
+# target to preprocess a source file
+tests/test_pid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pid.dir/build.make CMakeFiles/test_pid.dir/tests/test_pid.cpp.i
+.PHONY : tests/test_pid.cpp.i
+
+tests/test_pid.s: tests/test_pid.cpp.s
+.PHONY : tests/test_pid.s
+
+# target to generate assembly for a file
+tests/test_pid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pid.dir/build.make CMakeFiles/test_pid.dir/tests/test_pid.cpp.s
+.PHONY : tests/test_pid.cpp.s
 
 tests/test_statemachine.o: tests/test_statemachine.cpp.o
 .PHONY : tests/test_statemachine.o
@@ -476,7 +550,9 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... test_canparser"
 	@echo "... test_controller"
+	@echo "... test_pid"
 	@echo "... test_statemachine"
 	@echo "... src/app/CoolingController.o"
 	@echo "... src/app/CoolingController.i"
@@ -493,9 +569,15 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... tests/test_canparser.o"
+	@echo "... tests/test_canparser.i"
+	@echo "... tests/test_canparser.s"
 	@echo "... tests/test_controller.o"
 	@echo "... tests/test_controller.i"
 	@echo "... tests/test_controller.s"
+	@echo "... tests/test_pid.o"
+	@echo "... tests/test_pid.i"
+	@echo "... tests/test_pid.s"
 	@echo "... tests/test_statemachine.o"
 	@echo "... tests/test_statemachine.i"
 	@echo "... tests/test_statemachine.s"

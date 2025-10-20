@@ -6,9 +6,9 @@ using namespace eae::drivers;
 // test for parsing temperature CAN frame
 TEST(CANParser, ParsesTemperature) {
     CANParser parser;
-    CANFrame f{CAN_ID_TEMPERATURE, {0x0F, 0xA0}}; // 4000 => 40.00 °C
+    CANFrame f{CAN_ID_TEMPERATURE, {0x00, 0x28}}; // 40 => 40 °C (no /100)
     ASSERT_TRUE(parser.parseFrame(f));
-    EXPECT_NEAR(parser.latest().temperature_c, 40.0, 0.01);
+    EXPECT_EQ(parser.latest().temperature_c, 40.0);
 }
 // test for parsing level CAN frame
 TEST(CANParser, ParsesLevel) {

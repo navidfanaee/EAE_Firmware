@@ -39,4 +39,12 @@ add_test(NAME statemachine_test COMMAND ${CMAKE_CURRENT_BINARY_DIR}/test_statema
 # ----- CoolingController Tests -----
 add_executable(test_controller tests/test_controller.cpp)
 target_link_libraries(test_controller PRIVATE appcore drivers gtest_main)
-add_test(NAME coolingcontroller_test COMMAND ${CMAKE_CURRENT_BINARY_DIR}/test_coolingcontroller)
+add_test(NAME coolingcontroller_test COMMAND ${CMAKE_CURRENT_BINARY_DIR}/test_controller)
+# ----- PID Tests -----
+add_executable(test_pid tests/test_pid.cpp)
+target_link_libraries(test_pid PRIVATE appcore gtest_main)
+add_test(NAME pid_test COMMAND ${CMAKE_CURRENT_BINARY_DIR}/test_pid)  
+# ----- CANParser Tests -----
+add_executable(test_canparser tests/test_canparser.cpp)
+target_link_libraries(test_canparser PRIVATE drivers gtest_main)
+add_test(NAME canparser_test COMMAND ${CMAKE_CURRENT_BINARY_DIR}/test_canparser)    
