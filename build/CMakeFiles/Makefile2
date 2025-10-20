@@ -64,7 +64,10 @@ CMAKE_BINARY_DIR = /home/vboxuser/EAE_Firmware/build
 
 # The main recursive "all" target.
 all: CMakeFiles/drivers.dir/all
-all: CMakeFiles/test_canparser.dir/all
+all: CMakeFiles/appcore.dir/all
+all: CMakeFiles/eae_firmware.dir/all
+all: CMakeFiles/test_statemachine.dir/all
+all: CMakeFiles/test_controller.dir/all
 all: _deps/googletest-build/all
 .PHONY : all
 
@@ -74,7 +77,10 @@ preinstall: _deps/googletest-build/preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/drivers.dir/clean
-clean: CMakeFiles/test_canparser.dir/clean
+clean: CMakeFiles/appcore.dir/clean
+clean: CMakeFiles/eae_firmware.dir/clean
+clean: CMakeFiles/test_statemachine.dir/clean
+clean: CMakeFiles/test_controller.dir/clean
 clean: _deps/googletest-build/clean
 .PHONY : clean
 
@@ -136,7 +142,7 @@ _deps/googletest-build/googletest/clean: _deps/googletest-build/googletest/CMake
 CMakeFiles/drivers.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drivers.dir/build.make CMakeFiles/drivers.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drivers.dir/build.make CMakeFiles/drivers.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vboxuser/EAE_Firmware/build/CMakeFiles --progress-num=1,2 "Built target drivers"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vboxuser/EAE_Firmware/build/CMakeFiles --progress-num=5,6 "Built target drivers"
 .PHONY : CMakeFiles/drivers.dir/all
 
 # Build rule for subdir invocation for target.
@@ -156,32 +162,115 @@ CMakeFiles/drivers.dir/clean:
 .PHONY : CMakeFiles/drivers.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/test_canparser.dir
+# Target rules for target CMakeFiles/appcore.dir
 
 # All Build rule for target.
-CMakeFiles/test_canparser.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
-CMakeFiles/test_canparser.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
-CMakeFiles/test_canparser.dir/all: CMakeFiles/drivers.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_canparser.dir/build.make CMakeFiles/test_canparser.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_canparser.dir/build.make CMakeFiles/test_canparser.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vboxuser/EAE_Firmware/build/CMakeFiles --progress-num=11,12 "Built target test_canparser"
-.PHONY : CMakeFiles/test_canparser.dir/all
+CMakeFiles/appcore.dir/all: CMakeFiles/drivers.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appcore.dir/build.make CMakeFiles/appcore.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appcore.dir/build.make CMakeFiles/appcore.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vboxuser/EAE_Firmware/build/CMakeFiles --progress-num=1,2,3,4 "Built target appcore"
+.PHONY : CMakeFiles/appcore.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/test_canparser.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/EAE_Firmware/build/CMakeFiles 8
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_canparser.dir/all
+CMakeFiles/appcore.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/EAE_Firmware/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/appcore.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/EAE_Firmware/build/CMakeFiles 0
-.PHONY : CMakeFiles/test_canparser.dir/rule
+.PHONY : CMakeFiles/appcore.dir/rule
 
 # Convenience name for target.
-test_canparser: CMakeFiles/test_canparser.dir/rule
-.PHONY : test_canparser
+appcore: CMakeFiles/appcore.dir/rule
+.PHONY : appcore
 
 # clean rule for target.
-CMakeFiles/test_canparser.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_canparser.dir/build.make CMakeFiles/test_canparser.dir/clean
-.PHONY : CMakeFiles/test_canparser.dir/clean
+CMakeFiles/appcore.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appcore.dir/build.make CMakeFiles/appcore.dir/clean
+.PHONY : CMakeFiles/appcore.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/eae_firmware.dir
+
+# All Build rule for target.
+CMakeFiles/eae_firmware.dir/all: CMakeFiles/drivers.dir/all
+CMakeFiles/eae_firmware.dir/all: CMakeFiles/appcore.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eae_firmware.dir/build.make CMakeFiles/eae_firmware.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eae_firmware.dir/build.make CMakeFiles/eae_firmware.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vboxuser/EAE_Firmware/build/CMakeFiles --progress-num=7,8 "Built target eae_firmware"
+.PHONY : CMakeFiles/eae_firmware.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/eae_firmware.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/EAE_Firmware/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/eae_firmware.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/EAE_Firmware/build/CMakeFiles 0
+.PHONY : CMakeFiles/eae_firmware.dir/rule
+
+# Convenience name for target.
+eae_firmware: CMakeFiles/eae_firmware.dir/rule
+.PHONY : eae_firmware
+
+# clean rule for target.
+CMakeFiles/eae_firmware.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eae_firmware.dir/build.make CMakeFiles/eae_firmware.dir/clean
+.PHONY : CMakeFiles/eae_firmware.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_statemachine.dir
+
+# All Build rule for target.
+CMakeFiles/test_statemachine.dir/all: CMakeFiles/drivers.dir/all
+CMakeFiles/test_statemachine.dir/all: CMakeFiles/appcore.dir/all
+CMakeFiles/test_statemachine.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+CMakeFiles/test_statemachine.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_statemachine.dir/build.make CMakeFiles/test_statemachine.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_statemachine.dir/build.make CMakeFiles/test_statemachine.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vboxuser/EAE_Firmware/build/CMakeFiles --progress-num=19,20 "Built target test_statemachine"
+.PHONY : CMakeFiles/test_statemachine.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_statemachine.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/EAE_Firmware/build/CMakeFiles 12
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_statemachine.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/EAE_Firmware/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_statemachine.dir/rule
+
+# Convenience name for target.
+test_statemachine: CMakeFiles/test_statemachine.dir/rule
+.PHONY : test_statemachine
+
+# clean rule for target.
+CMakeFiles/test_statemachine.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_statemachine.dir/build.make CMakeFiles/test_statemachine.dir/clean
+.PHONY : CMakeFiles/test_statemachine.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_controller.dir
+
+# All Build rule for target.
+CMakeFiles/test_controller.dir/all: CMakeFiles/drivers.dir/all
+CMakeFiles/test_controller.dir/all: CMakeFiles/appcore.dir/all
+CMakeFiles/test_controller.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+CMakeFiles/test_controller.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_controller.dir/build.make CMakeFiles/test_controller.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_controller.dir/build.make CMakeFiles/test_controller.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vboxuser/EAE_Firmware/build/CMakeFiles --progress-num=17,18 "Built target test_controller"
+.PHONY : CMakeFiles/test_controller.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_controller.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/EAE_Firmware/build/CMakeFiles 12
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_controller.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/EAE_Firmware/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_controller.dir/rule
+
+# Convenience name for target.
+test_controller: CMakeFiles/test_controller.dir/rule
+.PHONY : test_controller
+
+# clean rule for target.
+CMakeFiles/test_controller.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_controller.dir/build.make CMakeFiles/test_controller.dir/clean
+.PHONY : CMakeFiles/test_controller.dir/clean
 
 #=============================================================================
 # Target rules for target _deps/googletest-build/googlemock/CMakeFiles/gmock.dir
@@ -190,7 +279,7 @@ CMakeFiles/test_canparser.dir/clean:
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vboxuser/EAE_Firmware/build/CMakeFiles --progress-num=3,4 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vboxuser/EAE_Firmware/build/CMakeFiles --progress-num=9,10 "Built target gmock"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -217,7 +306,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletes
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vboxuser/EAE_Firmware/build/CMakeFiles --progress-num=5,6 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vboxuser/EAE_Firmware/build/CMakeFiles --progress-num=11,12 "Built target gmock_main"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -243,7 +332,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vboxuser/EAE_Firmware/build/CMakeFiles --progress-num=7,8 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vboxuser/EAE_Firmware/build/CMakeFiles --progress-num=13,14 "Built target gtest"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -269,7 +358,7 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vboxuser/EAE_Firmware/build/CMakeFiles --progress-num=9,10 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vboxuser/EAE_Firmware/build/CMakeFiles --progress-num=15,16 "Built target gtest_main"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.

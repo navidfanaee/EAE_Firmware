@@ -1,33 +1,53 @@
-Start testing: Oct 20 08:38 PDT
+Start testing: Oct 20 10:29 PDT
 ----------------------------------------------------------
-1/1 Testing: canparser_test
-1/1 Test: canparser_test
-Command: "/home/vboxuser/EAE_Firmware/build/test_canparser"
+1/2 Testing: statemachine_test
+1/2 Test: statemachine_test
+Command: "/home/vboxuser/EAE_Firmware/build/test_statemachine"
 Directory: /home/vboxuser/EAE_Firmware/build
-"canparser_test" start time: Oct 20 08:38 PDT
+"statemachine_test" start time: Oct 20 10:29 PDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/vboxuser/EAE_Firmware/build/_deps/googletest-src/googletest/src/gtest_main.cc
-[==========] Running 3 tests from 1 test suite.
+[==========] Running 5 tests from 1 test suite.
 [----------] Global test environment set-up.
-[----------] 3 tests from CANParser
-[ RUN      ] CANParser.ParsesTemperature
-[       OK ] CANParser.ParsesTemperature (0 ms)
-[ RUN      ] CANParser.ParsesLevel
-[       OK ] CANParser.ParsesLevel (0 ms)
-[ RUN      ] CANParser.ParsesPumpFeedback
-[       OK ] CANParser.ParsesPumpFeedback (0 ms)
-[----------] 3 tests from CANParser (0 ms total)
+[----------] 5 tests from StateMachine
+[ RUN      ] StateMachine.OffToStartup
+[       OK ] StateMachine.OffToStartup (0 ms)
+[ RUN      ] StateMachine.StartupToIdleWhenPumpOk
+[       OK ] StateMachine.StartupToIdleWhenPumpOk (0 ms)
+[ RUN      ] StateMachine.IdleToCoolingOnHighTemp
+[       OK ] StateMachine.IdleToCoolingOnHighTemp (0 ms)
+[ RUN      ] StateMachine.CoolingToBoost
+[       OK ] StateMachine.CoolingToBoost (0 ms)
+[ RUN      ] StateMachine.FaultReset
+[       OK ] StateMachine.FaultReset (0 ms)
+[----------] 5 tests from StateMachine (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 3 tests from 1 test suite ran. (3 ms total)
-[  PASSED  ] 3 tests.
+[==========] 5 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 5 tests.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"canparser_test" end time: Oct 20 08:38 PDT
-"canparser_test" time elapsed: 00:00:00
+"statemachine_test" end time: Oct 20 10:29 PDT
+"statemachine_test" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 20 08:38 PDT
+Unable to find executable: /home/vboxuser/EAE_Firmware/build/test_coolingcontroller
+2/2 Testing: coolingcontroller_test
+2/2 Test: coolingcontroller_test
+Command: ""
+Directory: /home/vboxuser/EAE_Firmware/build
+"coolingcontroller_test" start time: 
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"coolingcontroller_test" end time: Oct 20 10:29 PDT
+"coolingcontroller_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 20 10:29 PDT

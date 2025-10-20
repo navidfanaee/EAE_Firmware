@@ -1,5 +1,4 @@
 #include "app/StateMachine.hpp"
-#include "../DebugMonitor.hpp"
 #include <string>
 
 using namespace eae::app;
@@ -59,7 +58,7 @@ SystemOutputs StateMachine::step(const SystemInputs &in) {
             out.pump_cmd = true;
             out.inverter_derate = false;
             if (!in.ignition) enter_state(SystemState::OFF, in.now_ms);
-            if (in.remote_derate_request) enter_state(SystemState::DERATE, in.now_ms);
+            if (in.derate_request) enter_state(SystemState::DERATE, in.now_ms);
             if (in.temperature_c >= 67.0) enter_state(SystemState::ACTIVE_COOLING, in.now_ms);
             break;
         case SystemState::ACTIVE_COOLING:
@@ -88,7 +87,7 @@ SystemOutputs StateMachine::step(const SystemInputs &in) {
             out.fan_pwm = 100;
             out.inverter_derate = true;
             if (!in.level_ok) enter_state(SystemState::FAULT, in.now_ms);
-            if (in.temperature_c <= 65.0 && !in.remote_derate_request) enter_state(SystemState::IDLE, in.now_ms);
+            if (in.temperature_c <= 65.0 && !in.derate_request) enter_state(SystemState::IDLE, in.now_ms);
             break;
         case SystemState::FAULT:
             out.pump_cmd = false;

@@ -1,7 +1,6 @@
 #pragma once
-// configuration constants for the cooling system
 namespace eae::config {
-    inline constexpr double CONTROL_DT_SEC = 0.2;
+    inline constexpr double CONTROL_DT_SEC = 0.2; // 200 ms
     inline constexpr double DEFAULT_SETPOINT_C = 65.0;
     inline constexpr double HYSTERESIS_C = 2.0;
     inline constexpr double DERATE_TEMP_C = 75.0;

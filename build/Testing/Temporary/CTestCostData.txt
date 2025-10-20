@@ -1,2 +1,4 @@
-canparser_test 1 0.022774
+statemachine_test 3 0.00086658
+coolingcontroller_test 0 0
 ---
+coolingcontroller_test

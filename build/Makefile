@@ -185,17 +185,56 @@ drivers/fast:
 .PHONY : drivers/fast
 
 #=============================================================================
-# Target rules for targets named test_canparser
+# Target rules for targets named appcore
 
 # Build rule for target.
-test_canparser: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_canparser
-.PHONY : test_canparser
+appcore: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 appcore
+.PHONY : appcore
 
 # fast build rule for target.
-test_canparser/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_canparser.dir/build.make CMakeFiles/test_canparser.dir/build
-.PHONY : test_canparser/fast
+appcore/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appcore.dir/build.make CMakeFiles/appcore.dir/build
+.PHONY : appcore/fast
+
+#=============================================================================
+# Target rules for targets named eae_firmware
+
+# Build rule for target.
+eae_firmware: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 eae_firmware
+.PHONY : eae_firmware
+
+# fast build rule for target.
+eae_firmware/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eae_firmware.dir/build.make CMakeFiles/eae_firmware.dir/build
+.PHONY : eae_firmware/fast
+
+#=============================================================================
+# Target rules for targets named test_statemachine
+
+# Build rule for target.
+test_statemachine: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_statemachine
+.PHONY : test_statemachine
+
+# fast build rule for target.
+test_statemachine/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_statemachine.dir/build.make CMakeFiles/test_statemachine.dir/build
+.PHONY : test_statemachine/fast
+
+#=============================================================================
+# Target rules for targets named test_controller
+
+# Build rule for target.
+test_controller: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_controller
+.PHONY : test_controller
+
+# fast build rule for target.
+test_controller/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_controller.dir/build.make CMakeFiles/test_controller.dir/build
+.PHONY : test_controller/fast
 
 #=============================================================================
 # Target rules for targets named gmock
@@ -249,6 +288,78 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+src/app/CoolingController.o: src/app/CoolingController.cpp.o
+.PHONY : src/app/CoolingController.o
+
+# target to build an object file
+src/app/CoolingController.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appcore.dir/build.make CMakeFiles/appcore.dir/src/app/CoolingController.cpp.o
+.PHONY : src/app/CoolingController.cpp.o
+
+src/app/CoolingController.i: src/app/CoolingController.cpp.i
+.PHONY : src/app/CoolingController.i
+
+# target to preprocess a source file
+src/app/CoolingController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appcore.dir/build.make CMakeFiles/appcore.dir/src/app/CoolingController.cpp.i
+.PHONY : src/app/CoolingController.cpp.i
+
+src/app/CoolingController.s: src/app/CoolingController.cpp.s
+.PHONY : src/app/CoolingController.s
+
+# target to generate assembly for a file
+src/app/CoolingController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appcore.dir/build.make CMakeFiles/appcore.dir/src/app/CoolingController.cpp.s
+.PHONY : src/app/CoolingController.cpp.s
+
+src/app/PID.o: src/app/PID.cpp.o
+.PHONY : src/app/PID.o
+
+# target to build an object file
+src/app/PID.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appcore.dir/build.make CMakeFiles/appcore.dir/src/app/PID.cpp.o
+.PHONY : src/app/PID.cpp.o
+
+src/app/PID.i: src/app/PID.cpp.i
+.PHONY : src/app/PID.i
+
+# target to preprocess a source file
+src/app/PID.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appcore.dir/build.make CMakeFiles/appcore.dir/src/app/PID.cpp.i
+.PHONY : src/app/PID.cpp.i
+
+src/app/PID.s: src/app/PID.cpp.s
+.PHONY : src/app/PID.s
+
+# target to generate assembly for a file
+src/app/PID.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appcore.dir/build.make CMakeFiles/appcore.dir/src/app/PID.cpp.s
+.PHONY : src/app/PID.cpp.s
+
+src/app/StateMachine.o: src/app/StateMachine.cpp.o
+.PHONY : src/app/StateMachine.o
+
+# target to build an object file
+src/app/StateMachine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appcore.dir/build.make CMakeFiles/appcore.dir/src/app/StateMachine.cpp.o
+.PHONY : src/app/StateMachine.cpp.o
+
+src/app/StateMachine.i: src/app/StateMachine.cpp.i
+.PHONY : src/app/StateMachine.i
+
+# target to preprocess a source file
+src/app/StateMachine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appcore.dir/build.make CMakeFiles/appcore.dir/src/app/StateMachine.cpp.i
+.PHONY : src/app/StateMachine.cpp.i
+
+src/app/StateMachine.s: src/app/StateMachine.cpp.s
+.PHONY : src/app/StateMachine.s
+
+# target to generate assembly for a file
+src/app/StateMachine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appcore.dir/build.make CMakeFiles/appcore.dir/src/app/StateMachine.cpp.s
+.PHONY : src/app/StateMachine.cpp.s
+
 src/drivers/CANParser.o: src/drivers/CANParser.cpp.o
 .PHONY : src/drivers/CANParser.o
 
@@ -273,29 +384,77 @@ src/drivers/CANParser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drivers.dir/build.make CMakeFiles/drivers.dir/src/drivers/CANParser.cpp.s
 .PHONY : src/drivers/CANParser.cpp.s
 
-tests/test_canparser.o: tests/test_canparser.cpp.o
-.PHONY : tests/test_canparser.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-tests/test_canparser.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_canparser.dir/build.make CMakeFiles/test_canparser.dir/tests/test_canparser.cpp.o
-.PHONY : tests/test_canparser.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eae_firmware.dir/build.make CMakeFiles/eae_firmware.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-tests/test_canparser.i: tests/test_canparser.cpp.i
-.PHONY : tests/test_canparser.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-tests/test_canparser.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_canparser.dir/build.make CMakeFiles/test_canparser.dir/tests/test_canparser.cpp.i
-.PHONY : tests/test_canparser.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eae_firmware.dir/build.make CMakeFiles/eae_firmware.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-tests/test_canparser.s: tests/test_canparser.cpp.s
-.PHONY : tests/test_canparser.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-tests/test_canparser.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_canparser.dir/build.make CMakeFiles/test_canparser.dir/tests/test_canparser.cpp.s
-.PHONY : tests/test_canparser.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eae_firmware.dir/build.make CMakeFiles/eae_firmware.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+tests/test_controller.o: tests/test_controller.cpp.o
+.PHONY : tests/test_controller.o
+
+# target to build an object file
+tests/test_controller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_controller.dir/build.make CMakeFiles/test_controller.dir/tests/test_controller.cpp.o
+.PHONY : tests/test_controller.cpp.o
+
+tests/test_controller.i: tests/test_controller.cpp.i
+.PHONY : tests/test_controller.i
+
+# target to preprocess a source file
+tests/test_controller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_controller.dir/build.make CMakeFiles/test_controller.dir/tests/test_controller.cpp.i
+.PHONY : tests/test_controller.cpp.i
+
+tests/test_controller.s: tests/test_controller.cpp.s
+.PHONY : tests/test_controller.s
+
+# target to generate assembly for a file
+tests/test_controller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_controller.dir/build.make CMakeFiles/test_controller.dir/tests/test_controller.cpp.s
+.PHONY : tests/test_controller.cpp.s
+
+tests/test_statemachine.o: tests/test_statemachine.cpp.o
+.PHONY : tests/test_statemachine.o
+
+# target to build an object file
+tests/test_statemachine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_statemachine.dir/build.make CMakeFiles/test_statemachine.dir/tests/test_statemachine.cpp.o
+.PHONY : tests/test_statemachine.cpp.o
+
+tests/test_statemachine.i: tests/test_statemachine.cpp.i
+.PHONY : tests/test_statemachine.i
+
+# target to preprocess a source file
+tests/test_statemachine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_statemachine.dir/build.make CMakeFiles/test_statemachine.dir/tests/test_statemachine.cpp.i
+.PHONY : tests/test_statemachine.cpp.i
+
+tests/test_statemachine.s: tests/test_statemachine.cpp.s
+.PHONY : tests/test_statemachine.s
+
+# target to generate assembly for a file
+tests/test_statemachine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_statemachine.dir/build.make CMakeFiles/test_statemachine.dir/tests/test_statemachine.cpp.s
+.PHONY : tests/test_statemachine.cpp.s
 
 # Help Target
 help:
@@ -310,18 +469,36 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... appcore"
 	@echo "... drivers"
+	@echo "... eae_firmware"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... test_canparser"
+	@echo "... test_controller"
+	@echo "... test_statemachine"
+	@echo "... src/app/CoolingController.o"
+	@echo "... src/app/CoolingController.i"
+	@echo "... src/app/CoolingController.s"
+	@echo "... src/app/PID.o"
+	@echo "... src/app/PID.i"
+	@echo "... src/app/PID.s"
+	@echo "... src/app/StateMachine.o"
+	@echo "... src/app/StateMachine.i"
+	@echo "... src/app/StateMachine.s"
 	@echo "... src/drivers/CANParser.o"
 	@echo "... src/drivers/CANParser.i"
 	@echo "... src/drivers/CANParser.s"
-	@echo "... tests/test_canparser.o"
-	@echo "... tests/test_canparser.i"
-	@echo "... tests/test_canparser.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... tests/test_controller.o"
+	@echo "... tests/test_controller.i"
+	@echo "... tests/test_controller.s"
+	@echo "... tests/test_statemachine.o"
+	@echo "... tests/test_statemachine.i"
+	@echo "... tests/test_statemachine.s"
 .PHONY : help
 
 

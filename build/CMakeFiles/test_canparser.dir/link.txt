@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/test_canparser.dir/tests/test_canparser.cpp.o -o test_canparser  libdrivers.a lib/libgtest_main.a lib/libgtest.a 

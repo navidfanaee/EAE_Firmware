@@ -21,7 +21,7 @@ struct SystemInputs {
     bool ignition{false};
     bool level_ok{true};
     bool pump_feedback_ok{true};
-    bool remote_derate_request{false};
+    bool derate_request{false};
     bool manual_reset{false};
     uint64_t now_ms{0};
 };
