@@ -6,10 +6,10 @@ DT=$((1000 / RATE_HZ))
 
 echo "Simulating CAN traffic on vcan0 at ${RATE_HZ}Hz"
 
-#incrementing temp sensor data between 30.00°C and 40.00°C
+#incrementing temp sensor data between 30.00°C and 100.00°C
 i=0
 while true; do
-  temp=$((30 + (i % 81)))   # 30.00°C–40.00°C
+  temp=$((30 + (i % 81)))   # 30.00°C–110.00°C
   hi=$(printf "%02X" $(( (temp >> 8) & 0xFF )))
   lo=$(printf "%02X" $(( temp & 0xFF )))
   cansend vcan0 100#${hi}${lo}
