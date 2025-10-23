@@ -1,5 +1,0 @@
-statemachine_test 2 0.00449264
-coolingcontroller_test 2 0.00291685
-pid_test 2 0.00604073
-canparser_test 2 0.00415289
----

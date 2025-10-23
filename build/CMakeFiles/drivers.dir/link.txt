@@ -1,2 +1,0 @@
-/usr/bin/ar qc libdrivers.a CMakeFiles/drivers.dir/src/drivers/CANParser.cpp.o
-/usr/bin/ranlib libdrivers.a
